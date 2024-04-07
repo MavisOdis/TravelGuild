@@ -5,17 +5,31 @@ import {
   ScrollView,
   TouchableOpacity,
 } from "react-native";
-import React from "react";
+import React, { useRef, useState } from "react";
 import Colors from "@/constants/Colors";
 import destinationCategories from "@/data/categories";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 export default function CategoryButtons() {
+  const scrollRef = useRef<ScrollView>(null);
+  const itemRef = useRef<TouchableOpacity[] | null[]>([]);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handleSelectCategory = (index: number) => {
+    const selected = itemRef.current[index];
+
+    setActiveIndex(index);
+
+    selected?.measure((x) => {
+      scrollRef.current?.scrollTo({ x: x, y: 0, animated: true });
+    });
+  };
   return (
     <View>
       <Text style={styles.title}>Categories</Text>
 
       <ScrollView
+        ref={scrollRef}
         horizontal
         showsHorizontalScrollIndicator={false}
         contentContainerStyle={{
@@ -25,13 +39,30 @@ export default function CategoryButtons() {
         }}
       >
         {destinationCategories.map((item, index) => (
-          <TouchableOpacity onPress={() => {}} style={styles.categoriesBtn}>
+          <TouchableOpacity
+            key={index}
+            ref={(el) => itemRef.current[index] = el}
+            onPress={() => handleSelectCategory(index)}
+            style={
+              activeIndex == index
+                ? styles.categoryBtnActive
+                : styles.categoriesBtn
+            }
+          >
             <MaterialCommunityIcons
               name={item.iconName as any}
               size={20}
-              color={Colors.black}
+              color={activeIndex == index ? Colors.white : Colors.black}
             />
-            <Text>{item.title}</Text>
+            <Text
+              style={
+                activeIndex == index
+                  ? styles.categoryActiveTxt
+                  : styles.categoryBtnTxt
+              }
+            >
+              {item.title}
+            </Text>
           </TouchableOpacity>
         ))}
       </ScrollView>
@@ -56,5 +87,25 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 1, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 3,
+  },
+  categoryBtnTxt: {
+    marginLeft: 5,
+    color: Colors.black,
+  },
+  categoryBtnActive: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: Colors.primaryColor,
+    paddingHorizontal: 16,
+    paddingVertical: 10,
+    borderRadius: 10,
+    shadowColor: "#333333",
+    shadowOffset: { width: 1, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 3,
+  },
+  categoryActiveTxt: {
+    marginLeft: 5,
+    color: Colors.white,
   },
 });
