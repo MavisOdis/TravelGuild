@@ -1,10 +1,10 @@
-import { View,StyleSheet, Text } from 'react-native'
+import { View, StyleSheet, Text } from 'react-native'
 import React from 'react'
 
-export default function Page() {
+export default function search() {
   return (
     <View style={styles.container}>
-      <Text>Page</Text>
+      <Text>search</Text>
     </View>
   )
 }
