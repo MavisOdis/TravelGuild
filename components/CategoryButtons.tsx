@@ -41,7 +41,7 @@ export default function CategoryButtons() {
         {destinationCategories.map((item, index) => (
           <TouchableOpacity
             key={index}
-            ref={(el) => itemRef.current[index] = el}
+            ref={(el) => (itemRef.current[index] = el)}
             onPress={() => handleSelectCategory(index)}
             style={
               activeIndex == index
