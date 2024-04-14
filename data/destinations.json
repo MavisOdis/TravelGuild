@@ -1,0 +1,13 @@
+[   
+{
+    "id": "1",
+    "name" : "Tropical Paradise Resort",
+    "image": "https://unsplash.com/s/photos/random",
+    "description": "Escape to the autimate Paradise",
+    "rating": 4.8,
+    "price": "150",
+    "duration": "3",
+    "location": "Pacific Ocean",
+    "category": "Beaches"
+}
+]

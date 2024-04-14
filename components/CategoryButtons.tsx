@@ -10,7 +10,11 @@ import Colors from "@/constants/Colors";
 import destinationCategories from "@/data/categories";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-export default function CategoryButtons() {
+type Props = {
+  onCagtegoryChange: (category: string) => void;
+}
+
+export default function CategoryButtons({onCagtegoryChange}: Props) {
   const scrollRef = useRef<ScrollView>(null);
   const itemRef = useRef<TouchableOpacity[] | null[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -23,6 +27,8 @@ export default function CategoryButtons() {
     selected?.measure((x) => {
       scrollRef.current?.scrollTo({ x: x, y: 0, animated: true });
     });
+
+    onCagtegoryChange(destinationCategories[index].title);
   };
   return (
     <View>
@@ -41,7 +47,7 @@ export default function CategoryButtons() {
         {destinationCategories.map((item, index) => (
           <TouchableOpacity
             key={index}
-            ref={(el) => (itemRef.current[index] = el)}
+            ref={(el) => itemRef.current[index] = el}
             onPress={() => handleSelectCategory(index)}
             style={
               activeIndex == index
