@@ -13,13 +13,14 @@ import Colors from "@/constants/Colors";
 import { useHeaderHeight } from "@react-navigation/elements";
 import CategoryButtons from "@/components/CategoryButtons";
 import Listings from "@/components/Listings";
+import ListingData from "../../data/destinations.json"
 
 export default function Page() {
   const headrHeight = useHeaderHeight();
   const [category, setCategory] = useState('All');
 
   const onCatChanged = (category: string) => {
-    console.log("category: ", category);
+    // console.log("category: ", category);
     setCategory(category);
   }
 
@@ -80,7 +81,7 @@ export default function Page() {
 
         <CategoryButtons onCagtegoryChange={onCatChanged}/>
 
-        <Listings />
+        <Listings listings={ListingData} />
       </View>
     </>
   );

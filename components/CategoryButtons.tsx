@@ -25,7 +25,7 @@ export default function CategoryButtons({onCagtegoryChange}: Props) {
     setActiveIndex(index);
 
     selected?.measure((x) => {
-      scrollRef.current?.scrollTo({ x: x, y: 0, animated: true });
+      scrollRef.current?.scrollTo({ x: x, y: 0, animated: true});
     });
 
     onCagtegoryChange(destinationCategories[index].title);
@@ -50,7 +50,7 @@ export default function CategoryButtons({onCagtegoryChange}: Props) {
             ref={(el) => itemRef.current[index] = el}
             onPress={() => handleSelectCategory(index)}
             style={
-              activeIndex == index
+              activeIndex === index
                 ? styles.categoryBtnActive
                 : styles.categoriesBtn
             }
@@ -58,11 +58,11 @@ export default function CategoryButtons({onCagtegoryChange}: Props) {
             <MaterialCommunityIcons
               name={item.iconName as any}
               size={20}
-              color={activeIndex == index ? Colors.white : Colors.black}
+              color={activeIndex === index ? Colors.white : Colors.black}
             />
             <Text
               style={
-                activeIndex == index
+                activeIndex === index
                   ? styles.categoryActiveTxt
                   : styles.categoryBtnTxt
               }
