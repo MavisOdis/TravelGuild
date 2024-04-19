@@ -24,12 +24,34 @@
 {
     "id": "3",
     "name" : "Tropical Paradise Resort",
-    "image": "https://www.istockphoto.com/photo/tropical-sea-gm668799610-122165429",
+    "image": "https://unsplash.com/photos/palm-tree-near-seashore-Siuwr3uCir0",
     "description": "Escape to the autimate Paradise",
     "rating": 4.8,
     "price": "150",
     "duration": "3",
     "location": "Pacific Ocean",
     "category": "Beaches"
+},
+{
+    "id": "4",
+    "name" : "Tropical Paradise Resort",
+    "image": "https://xsgames.co/randomusers/avatar.php?g=female",
+    "description": "Escape to the autimate Paradise",
+    "rating": 4.8,
+    "price": "150",
+    "duration": "3",
+    "location": "Pacific Ocean",
+    "category": "Beaches"
+},
+{
+    "id": "5",
+    "name" : "Tropical Paradise Resort",
+    "image": "https://xsgames.co/randomusers/avatar.php?g=female",
+    "description": "Escape to the autimate Paradise",
+    "rating": 4.8,
+    "price": "150",
+    "duration": "3",
+    "location": "Pacific Ocean",
+    "category": "Cities"
 }
 ]
