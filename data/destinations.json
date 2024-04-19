@@ -11,9 +11,9 @@
     "category": "Beaches"
 },
 {
-    "id": "1",
+    "id": "2",
     "name" : "Tropical Paradise Resort",
-    "image": "https://unsplash.com/s/photos/random",
+    "image": "https://unsplash.com/photos/a-woman-in-a-white-dress-is-dancing-b78iJbuHAM4",
     "description": "Escape to the autimate Paradise",
     "rating": 4.8,
     "price": "150",
@@ -22,9 +22,9 @@
     "category": "Beaches"
 },
 {
-    "id": "1",
+    "id": "3",
     "name" : "Tropical Paradise Resort",
-    "image": "https://unsplash.com/s/photos/random",
+    "image": "https://www.istockphoto.com/photo/tropical-sea-gm668799610-122165429",
     "description": "Escape to the autimate Paradise",
     "rating": 4.8,
     "price": "150",
