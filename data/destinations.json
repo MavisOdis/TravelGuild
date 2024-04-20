@@ -2,7 +2,7 @@
 {
     "id": "1",
     "name" : "Tropical Paradise Resort",
-    "image": "https://unsplash.com/photos/seashore-during-golden-hour-KMn4VEeEPR8",
+    "image": "https://fastly.picsum.photos/id/16/2500/1667.jpg?hmac=uAkZwYc5phCRNFTrV_prJ_0rP0EdwJaZ4ctje2bY7aE",
     "description": "Escape to the autimate Paradise",
     "rating": 4.8,
     "price": "150",
@@ -12,46 +12,46 @@
 },
 {
     "id": "2",
-    "name" : "Tropical Paradise Resort",
-    "image": "https://unsplash.com/photos/a-woman-in-a-white-dress-is-dancing-b78iJbuHAM4",
+    "name" : "Mountain Paradise Resort",
+    "image": "https://fastly.picsum.photos/id/15/2500/1667.jpg?hmac=Lv03D1Y3AsZ9L2tMMC1KQZekBVaQSDc1waqJ54IHvo4",
     "description": "Escape to the autimate Paradise",
     "rating": 4.8,
     "price": "150",
     "duration": "3",
-    "location": "Pacific Ocean",
-    "category": "Beaches"
+    "location": "Swizerland",
+    "category": "Mountains"
 },
 {
     "id": "3",
-    "name" : "Tropical Paradise Resort",
-    "image": "https://unsplash.com/photos/palm-tree-near-seashore-Siuwr3uCir0",
+    "name" : "City Resort",
+    "image": "https://fastly.picsum.photos/id/43/1280/831.jpg?hmac=glK-rQ0ppFClW-lvjk9FqEWKog07XkOxJf6Xg_cU9LI",
     "description": "Escape to the autimate Paradise",
     "rating": 4.8,
     "price": "150",
     "duration": "3",
-    "location": "Pacific Ocean",
-    "category": "Beaches"
+    "location": "United Kindom",
+    "category": "Cities"
 },
 {
     "id": "4",
-    "name" : "Tropical Paradise Resort",
-    "image": "https://xsgames.co/randomusers/avatar.php?g=female",
+    "name" : "Pacific Resort",
+    "image": "https://fastly.picsum.photos/id/77/1631/1102.jpg?hmac=sg0ArFCRjP1wlUg8vszg5RFfGiXZJkWEtqLLCRraeBw",
     "description": "Escape to the autimate Paradise",
     "rating": 4.8,
     "price": "150",
     "duration": "3",
-    "location": "Pacific Ocean",
-    "category": "Beaches"
+    "location": "Spain",
+    "category": "Ocean"
 },
 {
     "id": "5",
-    "name" : "Tropical Paradise Resort",
-    "image": "https://xsgames.co/randomusers/avatar.php?g=female",
+    "name" : "Cool Valley Resort",
+    "image": "https://fastly.picsum.photos/id/168/1920/1280.jpg?hmac=mVK82R-5FsJLUcjRsdWA1-NdN6xw6MexzmRmtqNpWUs",
     "description": "Escape to the autimate Paradise",
     "rating": 4.8,
     "price": "150",
     "duration": "3",
-    "location": "Pacific Ocean",
-    "category": "Cities"
+    "location": "Nigeria",
+    "category": "Valley"
 }
 ]
