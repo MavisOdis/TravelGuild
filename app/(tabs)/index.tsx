@@ -81,7 +81,7 @@ export default function Page() {
 
         <CategoryButtons onCagtegoryChange={onCatChanged}/>
 
-        <Listings listings={ListingData} />
+        <Listings listings={ListingData} category={category} />
       </View>
     </>
   );

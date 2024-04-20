@@ -7,7 +7,7 @@ import {
   Text,
   StyleSheet,
 } from "react-native";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { ListingType } from "@/types/listingType";
 import Colors from "@/constants/Colors";
 import { FontAwesome5, Ionicons } from "@expo/vector-icons";
@@ -15,9 +15,23 @@ import { Link } from "expo-router";
 
 type Props = {
   listings: any[];
+  category: string;
 };
 
-export default function Listings({ listings }: Props) {
+export default function Listings({ listings, category }: Props) {
+
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    console.log('update listing')
+
+    setLoading(true);
+
+    setTimeout(() => {
+      setLoading(false);
+    }, 200)
+  }, [category])
+
   const renderItems: ListRenderItem<ListingType> = ({ item }) => {
     return (
       <Link href={`/listing/${item.id}`} asChild>
@@ -55,7 +69,7 @@ export default function Listings({ listings }: Props) {
   return (
     <View>
       <FlatList
-        data={listings}
+        data={loading ? [] : listings}
         renderItem={renderItems}
         horizontal
         showsHorizontalScrollIndicator={false}
