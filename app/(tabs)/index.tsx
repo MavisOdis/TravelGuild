@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   Image,
   TextInput,
+  ScrollView,
 } from "react-native";
 import React, { useState } from "react";
 import { Stack } from "expo-router";
@@ -13,18 +14,18 @@ import Colors from "@/constants/Colors";
 import { useHeaderHeight } from "@react-navigation/elements";
 import CategoryButtons from "@/components/CategoryButtons";
 import Listings from "@/components/Listings";
-import ListingData from "../../data/destinations.json"
+import ListingData from "../../data/destinations.json";
 import GroupListings from "@/components/GroupListings";
-import groupData from "../../data/groups.json"
+import groupData from "../../data/groups.json";
 
 export default function Page() {
   const headrHeight = useHeaderHeight();
-  const [category, setCategory] = useState('All');
+  const [category, setCategory] = useState("All");
 
   const onCatChanged = (category: string) => {
     // console.log("category: ", category);
     setCategory(category);
-  }
+  };
 
   return (
     <>
@@ -63,29 +64,31 @@ export default function Page() {
       />
 
       <View style={[styles.container, { paddingTop: headrHeight }]}>
-        {/* Heading text */}
-        <Text style={styles.headingText}>Explore The Beautiful World!</Text>
+        <ScrollView showsVerticalScrollIndicator={false}>
+          {/* Heading text */}
+          <Text style={styles.headingText}>Explore The Beautiful World!</Text>
 
-        {/* Searchbar section */}
-        <View style={styles.searchBarSection}>
-          <View style={styles.searchBar}>
-            <Ionicons
-              name="search"
-              size={18}
-              style={{ marginRight: 5, color: Colors.black }}
-            />
-            <TextInput placeholder="search.." />
+          {/* Searchbar section */}
+          <View style={styles.searchBarSection}>
+            <View style={styles.searchBar}>
+              <Ionicons
+                name="search"
+                size={18}
+                style={{ marginRight: 5, color: Colors.black }}
+              />
+              <TextInput placeholder="search.." />
+            </View>
+            <TouchableOpacity onPress={() => {}} style={styles.filterBtn}>
+              <Ionicons name="options" size={28} color={Colors.white} />
+            </TouchableOpacity>
           </View>
-          <TouchableOpacity onPress={() => {}} style={styles.filterBtn}>
-            <Ionicons name="options" size={28} color={Colors.white} />
-          </TouchableOpacity>
-        </View>
 
-        <CategoryButtons onCagtegoryChange={onCatChanged}/>
+          <CategoryButtons onCagtegoryChange={onCatChanged} />
 
-        <Listings listings={ListingData} category={category} />
+          <Listings listings={ListingData} category={category} />
 
-        <GroupListings listings={groupData} />
+          <GroupListings listings={groupData} />
+        </ScrollView>
       </View>
     </>
   );
@@ -112,12 +115,12 @@ const styles = StyleSheet.create({
     padding: 16,
     backgroundColor: Colors.white,
     borderRadius: 10,
-    alignItems:'center'
+    alignItems: "center",
   },
   filterBtn: {
     backgroundColor: Colors.primaryColor,
-    marginLeft:20,
-    borderRadius:10,
-    padding:12
+    marginLeft: 20,
+    borderRadius: 10,
+    padding: 12,
   },
 });
