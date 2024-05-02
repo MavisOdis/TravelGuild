@@ -1,0 +1,37 @@
+[
+    {
+        "id": "1",
+        "name": "Holiday travel Agency",
+        "image": "https://fastly.picsum.photos/id/170/2500/1667.jpg?hmac=_-EP0GQDcU9M00VvD5FFfDBbFbmSIjgn_Wi4HJJ65HQ",
+        "ratings": 4.5,
+        "reviews": 650
+    },
+    {
+        "id": "2",
+        "name": "Travel Waka",
+        "image": "https://fastly.picsum.photos/id/164/1200/800.jpg?hmac=wkqGUkaeW3kiAsHq_VwxSWWossIMAwFV4eUfFzuDkew",
+        "ratings": 4.9,
+        "reviews": 1250
+    },
+    {
+        "id": "3",
+        "name": "Waka Doctor",
+        "image": "https://fastly.picsum.photos/id/182/2896/1944.jpg?hmac=lzw4TC7qF2R3BEJu05d0M6rdglY57ugjugCP6XoiMbQ",
+        "ratings": 4.8,
+        "reviews": 980
+    },
+    {
+        "id": "4",
+        "name": "Travel Better",
+        "image": "https://fastly.picsum.photos/id/193/3578/2451.jpg?hmac=M5yoazhwdwMa_27rC5-S50SNFvCy4Kni0wXoa6iVF0g",
+        "ratings": 4.8,
+        "reviews": 1240
+    },
+    {
+        "id": "5",
+        "name": "Holiday Guild",
+        "image": "https://fastly.picsum.photos/id/195/768/1024.jpg?hmac=rksrWrgeGQzOdzXlnzsTWy2L2zYq4gQei3TBMWCmXsI",
+        "ratings": 4.0,
+        "reviews": 700
+    }
+]

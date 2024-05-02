@@ -14,6 +14,8 @@ import { useHeaderHeight } from "@react-navigation/elements";
 import CategoryButtons from "@/components/CategoryButtons";
 import Listings from "@/components/Listings";
 import ListingData from "../../data/destinations.json"
+import GroupListings from "@/components/GroupListings";
+import groupData from "../../data/groups.json"
 
 export default function Page() {
   const headrHeight = useHeaderHeight();
@@ -82,6 +84,8 @@ export default function Page() {
         <CategoryButtons onCagtegoryChange={onCatChanged}/>
 
         <Listings listings={ListingData} category={category} />
+
+        <GroupListings listings={groupData} />
       </View>
     </>
   );
