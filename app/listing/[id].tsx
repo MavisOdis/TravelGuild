@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import React from "react";
-import { Stack, useLocalSearchParams } from "expo-router";
+import { Stack, useLocalSearchParams, useRouter } from "expo-router";
 import { ListingType } from "@/types/listingType";
 import ListingData from "../../data/destinations.json";
 import { Feather } from "@expo/vector-icons";
@@ -22,6 +22,8 @@ const ListingDetails = () => {
     (item) => item.id === id
   );
 
+  const router = useRouter();
+
   return (
     <>
       <Stack.Screen
@@ -29,7 +31,14 @@ const ListingDetails = () => {
           headerTransparent: true,
           headerTitle: "",
           headerLeft: () => (
-            <TouchableOpacity onPress={() => {}}>
+            <TouchableOpacity
+              onPress={() => router.back()}
+              style={{
+                backgroundColor: "rgba(255, 255, 255, 0.5)",
+                borderRadius: 10,
+                padding: 4,
+              }}
+            >
               <View
                 style={{
                   backgroundColor: Colors.white,
